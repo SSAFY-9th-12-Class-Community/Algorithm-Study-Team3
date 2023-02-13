@@ -25,7 +25,6 @@ public class SW_4014_활주로건설 {
 			}
 			bw.write("#"+tc+' '+answer+'\n');
 		}
-		
 		bw.flush();
 		bw.close();
 		br.close();
