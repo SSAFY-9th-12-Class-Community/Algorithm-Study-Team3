@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 // 실버 5
 // 숫자 카드
-public class Main_10815 {
+public class BOJ_10815 {
   private static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
   private static final BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
