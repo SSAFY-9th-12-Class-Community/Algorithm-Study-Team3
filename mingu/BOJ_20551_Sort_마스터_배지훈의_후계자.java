@@ -1,3 +1,6 @@
+// 제한시간 = 2000ms
+// 제출 = 2588ms (자바 추가시간) (https://www.acmicpc.net/help/language)
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
