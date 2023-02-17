@@ -15,7 +15,6 @@ public class BOJ_20551_Sort마스터배지훈의후계자 {
         for(int i=0; i<nm[0]; ++i) arr[i] = Integer.parseInt(br.readLine());
 
         Arrays.sort(arr);
-
         for(int i=0; i<nm[1]; ++i) {
             sb.append(binarySearch(arr, Integer.parseInt(br.readLine()))).append('\n');
         }
