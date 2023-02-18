@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 // 실버 2
 // 유기농 배추
-public class Main_1012 {
+public class BOJ_1012 {
 
     static int Y;
     static int X;

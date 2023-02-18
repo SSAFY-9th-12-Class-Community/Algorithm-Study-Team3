@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main_23288 {
+public class BOJ_23288 {
     static int[][] arr;
     static int[][] points;
     static int[][] visited;
