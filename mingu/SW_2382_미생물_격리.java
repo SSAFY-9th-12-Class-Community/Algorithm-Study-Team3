@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -62,40 +61,32 @@ public class Solution {
 	}
 	
 	public static void checkMerge() {
-		Stack<Integer> s = new Stack<Integer>();
-		for(int i = 0; i < K; i++) {
-			int maxIdx = -1;
-			int maxNum = -1;
-			for(int j = i+1; j < K; j++) {
-				if(g[i].row == g[j].row && g[i].col == g[j].col) {
-					if(g[i].num > g[j].num) {
-						if(g[i].num > maxNum) {
-							if(maxIdx != -1) {
-								s.push(maxIdx);
-							}
-							maxNum = g[i].num;
-							maxIdx = i;
-							s.push(j);
-						}
-					} else {
-						if(g[j].num > maxNum) {
-							if(maxIdx != -1) {
-								s.push(maxIdx);
-							}
-							maxNum = g[j].num;
-							maxIdx = j;
-							s.push(i);
-						}
-					}
-				}
-			}
-			while(!s.isEmpty()) {
-				int idx = s.pop();
-				g[maxIdx].num += g[idx].num;
-				g[idx].num = 0;
-			}
-		}
-	}
+        Stack<Integer> s = new Stack<Integer>();
+        
+        for(int i = 0; i < K; i++) {
+            if(g[i].num == 0) continue; // 미생물이 없거나 합쳐진 군집은 패스
+            
+            int maxIdx = i;
+            for(int j = i+1; j < K; j++) {
+                if(g[j].num == 0) continue;
+                
+                if((g[maxIdx].row == g[j].row) && (g[maxIdx].col == g[j].col)) {
+                    if(g[maxIdx].num < g[j].num) {
+                        s.push(maxIdx);
+                        maxIdx = j;
+                    } else {
+                        s.push(j);
+                    }
+                }       
+            }
+            
+            while(!s.isEmpty()) {
+                int idx = s.pop();
+                g[maxIdx].num += g[idx].num;
+                g[idx].num = 0;
+            }
+        }
+    }
 	
 	public static void checkDamaged(int idx) { // 미생물이 약품이 칠해진 셀에 도착했는지 검사 & 계산
 		if(g[idx].col == 0) {
