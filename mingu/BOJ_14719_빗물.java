@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 // 실행시간 : 132ms
 // (추가) 김한성님 리뷰코드 실행시간 : 140ms (왜?)
+// 메모리사용량은 같고 실행시간이 5~10% 줄지만 코드 길이가 1.5배 길다면 어떤 코드가 좋은 코드인가..?
 public class BOJ_14719 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
