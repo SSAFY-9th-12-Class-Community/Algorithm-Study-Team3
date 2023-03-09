@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 // 최대 N = 8
 // 행 -> 뒤집는다 or 안뒤집는다
 // 열 -> 뒤집는다 or 안뒤집는다
+// 4^8 = 2^16 = 65,536
 public class BOJ_23058 {
 	static int N;
 	static int map[];
